@@ -1,0 +1,213 @@
+\documentclass[%singlesided,
+               doublesided,
+               paper=a4,
+               fontsize=10pt
+              ]{my-resume}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set geometry
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength\highlightwidth{8cm}
+\setlength\headerheight{4cm}            % note that margintop gets added to this value, i.e. the header bar is 5cm
+\setlength\marginleft{1cm}
+\setlength\marginright{\marginleft}      % needs to be 1.5 times to be actually equal. why?
+\setlength\margintop{1cm}
+\setlength\marginbottom{1cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FONTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{fontspec}
+\setmainfont{Carlito}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\colorlet{highlightbarcolor}{lightgray}
+\colorlet{headerbarcolor}{darkgray}
+
+\colorlet{headerfontcolor}{white}
+\colorlet{accent}{awesome-green}
+\colorlet{heading}{black}
+\colorlet{emphasis}{black}
+\colorlet{body}{black}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\name{Jonas Bauer}
+\tagline{Dieser Lebenslauf ist ein Modell meiner Persönlichkeit, Fähigkeiten und Erfahrungen. \\ Nach George Box ist er demnach in jedem Fall falsch, aber im Idealfall hilfreich.}
+\photo[round]{Bild4.jpeg}{\dimexpr \headerheight-\marginbottom}   % make photo exactly match the header with margintop/marginright/marginbottom as margin
+
+\makeheader
+
+\highlightbar{
+
+    \section{Kontakt}
+    
+    \email{j.bauer@uni-bielefeld.de}
+    \phone{+49 178 8060012}
+    \location{Kreuzberger Straße 15a, 33619 Bielefeld }
+    \vspace{0.5em}
+    \github{@JonasBauer}{https://github.com/JonasBauer}
+    \linkedin{Jonas Bauer}{https://www.linkedin.com/in/jonas-bauer-55a014199/}
+    
+    
+    \section{Kompetenzen}
+    
+    \skillsection{Programmiersprachen}
+    \skill{R}{5}
+    \skill{Python}{4}
+    \skill{LaTeX}{4}
+    \skill{C++}{2}
+    \skill{Java}{2}
+    \skill{SLURM}{1}
+    \skill{SPSS}{1}
+    
+    \vspace{0.5em}
+    \skillsection{Software \& Libraries}
+    \skill{MS Office}{5}
+    \skill{Datenanalyse}{5}
+    (e.g. numpy, scipy)\\
+    \skill{Datenvisualisierung}{4}
+    (e.g. matplotlib, ggplot2, plotly)\\
+    \skill{Datenmanagement}{4}
+    (e.g. pandas, broom, readr, tidyverse)
+    \skill{Github}{3}
+    
+    \vspace{0.5em}
+    \skillsection{Methoden}
+    \skill{Regression}{5}
+    \skill{MCMC}{4}
+    \skill{Zeitreihenanalyse}{4}
+    \skill{(Hidden) Markov-Modelle}{4} \skill{Neuronale Netze}{3}
+    \skill{Überlebenszeitanalyse}{3}
+    \skill{Random Forests}{3}
+    \skill{Support Vector Machines}{2}
+    
+        
+    \vspace{0.5em}
+    \skillsection{Betriebssysteme}
+    \skill{Linux}{3}
+    \skill{Windows}{5}
+    
+    \vspace{0.5em}
+    \skillsection{Sprachen}
+    \skill{Deutsch}{5}
+    \skill{Englisch}{4}
+    \skill{Latein}{2}
+    \skill{Spanisch}{1}
+}
+\mainbar{
+\section[\faHeartbeat]{Lebensphilosophie}
+
+\begin{quote}
+``Embrace the never-ending self-improvement.''
+\end{quote}
+
+\section{Über mich}
+\begin{flushleft}
+Aufgrund meines interdisziplinären Fokus bin ich wohl ein atypischer Statistiker. Meine Wurzeln liegen hierbei sowohl in der Mathematik und Informatik, als auch in der quantitativen BWL. Mein Mindset zeichnet gnadenloser Optimismus, Lösungsorientierung und empirischer Skeptizismus aus. In meiner Freizeit laufe und bouldere ich gerne.
+\end{flushleft}
+    % This is taken from AltaCV
+    % see https://github.com/liantze/AltaCV for details
+    \wheelchart{1.5cm}{0.5cm}{% outer and inner diameter
+        4/8em/accent!20/Mathematiker,          % comma-separated list of
+        5/8em/accent!30/Data Scientist,    % fraction of 24 / line length / color / label
+        8/8em/accent!40/Ökonometriker,
+        4/8em/accent!50/Bankkaufmann,
+        3/8em/accent!60/Projektmanager,
+        5/8em/accent!70/Sportler
+    }
+    \section[\faGears]{Berufliche Laufbahn}
+    \job{08/2019 - today}
+        {SALETELLIGENCE GMBH, Bielefeld}
+        {Data Analyst}{}
+    \job{10/2020 - heute}
+        {Universität Bielefeld}
+        {Tutor Ökonometrie und WHK}{}
+    \job{02/2018 - 09/2019}
+        {Sprint Reply GmbH, Düsseldorf}
+        {Consultant im Projektmanagement}{}
+    \job{04/2017 - 09/2018}
+        {Universität Bielefeld}
+        {Tutor Statistik I und II}{}
+    \job{11/2015 - 02/2018}
+        {'Rund um Mode' (Yvonne Alfter e.K.}
+        {Werkstudent Buchhaltung}{}
+    \job{02/2015 - 09/2015}
+        {Kreissparkasse Wiedenbrück}
+        {Personalentwicklungsstelle}{}
+    \job{08/2012 - 01/2015}
+        {Kreissparkasse Wiedenbrück}
+        {Ausbildung zum Bankkaufmann }{}
+        
+        \section{Mitgliedschaften}
+    \achievement{Best Undergraduates to Bielefeld University (BU2BU-Programm)}
+    \achievement{Gründungsmitglied Fachschaft DaSt}
+    \achievement{Bielefelder Investment Verein e.V.}
+
+}
+\makebody
+\clearpage
+\newpage
+\makeheader
+\mainbar{
+
+
+    \section[\faMortarBoard]{Schulische Ausbildung}
+    \job{10/2018 - heute}
+        {Universität Bielefeld}
+        {Statistische Wissenschaften \\(M.o.Sc.) \\
+        $\diameter$-Note: $1,2$}
+        {}
+    \job{10/2015 - 09/2018}
+        {Universität Bielefeld}
+        {Wirtschaftswissenschaften \\(B.o.Sc.)\\
+        $\diameter$-Note: $1,2$}
+        {}
+    \job{08/2012 - 01/2015}{ Reinhard-Mohn-Berufskolleg}{IHK-Ausbildung Bankkaufmann\\
+        $\diameter$-Note: $1,6$}{}
+    \job{08/2003 - 06/2012}
+        {Gymnasium SHS}
+        {Allgemeine Hochschulreife\\
+        $\diameter$-Note: $1,7$}
+        {}
+\section{Abschlussarbeiten}
+    \thesis{Bachelor: Stilisierte Fakten in den Dax-Schlusskursen 2000-2017: \\Volatilitätsanalyse mit GARCH-Modellierung und mehr \\ (Lehrstuhl für Ökonometrie, Prof. Dr. Dietmar Bauer)}
+    \thesis{Master: A Simulation-based Comparison of Read Alignment Methods for RNA-Sequencing Data \\(Lehrstuhl Data Science, Prof. Dr. Christiane Fuchs)}
+    
+    \section{Bucket-List}
+    \smallskip % additional skip because tag outlines use up space
+    \tag{Hermannslauf}
+    \tag{Doktortitel}
+    \tag{Polarlichter}
+    \tag{Unternehmensgründung} \medskip\\
+ \tag{Jakobs-Weg}
+     \tag{Fallschirmsprung}
+    \tag{Kilimandscharo} 
+    \tag{Marathon} \medskip
+    \\ 
+        \tag{Straight Edge}
+
+}
+\highlightbar{
+\clearpage
+    \section{Referenzen}
+    \vspace{0.5em}
+    \cvref{Houda Yaqine}{Universität Bielefeld}{h.yaqine@uni-bielefeld.de}
+    \vspace{0.5em}
+    \cvref{Max Afflerbach}{Sprint Reply GmbH}{m.afflerbach@reply.de}}
+\makebody
+\end{document}
